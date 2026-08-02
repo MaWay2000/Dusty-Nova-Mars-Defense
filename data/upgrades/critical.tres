@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UpgradeData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/UpgradeData.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+upgrade_id = &"critical"
+title = "Critical Circuit"
+description = "Gain 10% critical-hit chance; critical hits deal double damage."
+amount = 0.1
+secondary_value = 2.0
+rarity = 1
+max_level = 5
+unlock_level = 3
+tags = Array[StringName]([&"weapon"])

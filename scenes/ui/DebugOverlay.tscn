@@ -1,0 +1,36 @@
+[gd_scene load_steps=3 format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/DebugOverlay.gd" id="1"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_debug"]
+bg_color = Color(0.01, 0.02, 0.025, 0.82)
+border_width_left = 1
+border_width_top = 1
+border_width_right = 1
+border_width_bottom = 1
+border_color = Color(0.3, 0.8, 0.8, 0.7)
+
+[node name="DebugOverlay" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1")
+
+[node name="Panel" type="PanelContainer" parent="."]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 235.0
+offset_right = 330.0
+offset_bottom = 440.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_debug")
+
+[node name="Label" type="Label" parent="Panel"]
+layout_mode = 2
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 20
+text = "FPS\nENEMIES\nPROJECTILES\nPLAYER\nWAVE"

@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="UpgradeData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/UpgradeData.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+upgrade_id = &"heal"
+title = "Emergency Nanites"
+description = "Restore 35 health."
+amount = 35.0
+max_level = 0
+healing_only = true
+tags = Array[StringName]([&"healing"])
