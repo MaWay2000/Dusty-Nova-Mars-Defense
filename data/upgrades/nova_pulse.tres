@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="UpgradeData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://scripts/resources/UpgradeData.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+upgrade_id = &"nova_pulse"
+title = "Nova Pulse"
+description = "Every 8 seconds, deal 25 damage per upgrade level to nearby enemies."
+amount = 25.0
+secondary_value = 8.0
+rarity = 2
+max_level = 3
+unlock_level = 6
+tags = Array[StringName]([&"legendary", &"area"])
