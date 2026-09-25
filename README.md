@@ -1,22 +1,68 @@
-# Dusty Nova: Mars Defense — First Playable Prototype
+# Dusty Nova: Mars Defense
 
-A dependency-free Godot 4 top-down survival prototype using only 2D nodes, GDScript, and generated placeholder shapes.
+[**Download the Windows prototype**](https://github.com/MaWay2000/Dusty-Nova-Mars-Defense/releases/tag/v0.1.0) · [Source code](https://github.com/MaWay2000/Dusty-Nova-Mars-Defense) · [Report an issue](https://github.com/MaWay2000/Dusty-Nova-Mars-Defense/issues)
 
-## Run
+A top-down survival game prototype built with Godot, GDScript, and 2D nodes. Survive increasingly difficult enemy waves on Mars, collect experience crystals, and choose upgrades as you level up.
 
-1. Open this folder's `project.godot` in Godot 4.
-2. Press **F6/F5** or click **Run Project**.
-3. Move with **WASD** or the **arrow keys**.
-4. Aim with the **mouse**; the blaster fires automatically toward the cursor.
-5. Press **Escape** or use the on-screen **Pause** button.
-6. Press **F3** to toggle the optional debug overlay.
+This repository provides a desktop prototype and the Godot project. There is currently no GitHub Pages browser build linked for this project.
 
-The round contains four increasingly difficult waves and lasts 4:55 including intermissions. Defeat enemies, collect green experience crystals, and choose one of three upgrades on each level-up. The 18-upgrade pool includes Common, Rare, and Legendary choices, level caps, guaranteed rarities, and one free reroll per run.
+## Play the Windows release
 
-## Prototype notes
+1. Open the [v0.1.0 release page](https://github.com/MaWay2000/Dusty-Nova-Mars-Defense/releases/tag/v0.1.0).
+2. Download `Dusty-Nova-Mars-Defense-Windows-v0.1.0.zip`.
+3. Extract the complete archive to a folder.
+4. Launch the included game executable.
 
-- The 1920×1080 reference layout scales with `canvas_items` and `expand` stretch settings.
-- `InputController.set_mobile_direction()` is the future virtual-joystick entry point.
-- Audio calls are routed through `AudioHooks`; missing audio files never produce load errors.
-- Enemy and projectile counts are capped and cleaned; mouse aiming does not scan the enemy list every frame.
-- All visuals are generated shapes, so there are no external asset dependencies.
+The release also includes `DustyNova-Portable-v0.1.0.exe`. The source repository may contain changes newer than that release.
+
+## Gameplay
+
+A run contains four waves and lasts approximately **4 minutes 55 seconds**, including intermissions. Defeat enemies, collect green experience crystals, and select one of three upgrades at each level-up.
+
+The upgrade pool contains 18 options across Common, Rare, and Legendary rarities, with upgrade level caps, guaranteed rarity choices, and one free reroll per run.
+
+## Controls
+
+| Action | Control |
+| --- | --- |
+| Move | WASD or arrow keys |
+| Aim | Mouse |
+| Fire | Automatic, toward the cursor |
+| Pause | Escape or the on-screen Pause button |
+| Debug overlay | F3 |
+
+## Run from source
+
+The project is configured for **Godot 4.7**.
+
+```bash
+git clone https://github.com/MaWay2000/Dusty-Nova-Mars-Defense.git
+cd Dusty-Nova-Mars-Defense
+```
+
+1. Open Godot and import `project.godot`.
+2. Allow the editor to import the project resources.
+3. Press **F5** or choose **Run Project**.
+
+The prototype uses generated placeholder shapes rather than an external visual asset pack. No npm or browser build pipeline is required.
+
+## Project layout
+
+- `project.godot`: project configuration and main-scene selection.
+- `scenes/`: Godot scenes, including the main game scene.
+- `scripts/`: gameplay and supporting logic.
+- `data/`: game data.
+- `tests/`: prototype checks.
+- `export_presets.cfg`: export configuration.
+
+## Prototype details
+
+- The 1920×1080 reference layout uses `canvas_items` and `expand` stretch settings.
+- Enemy and projectile counts are capped and cleaned up.
+- Mouse aiming does not scan the entire enemy list every frame.
+- Audio calls go through `AudioHooks`; missing audio files are tolerated.
+- `InputController.set_mobile_direction()` is an extension point for a future virtual joystick, not a claim of a finished mobile control scheme.
+
+## Feedback
+
+[Report bugs or suggestions](https://github.com/MaWay2000/Dusty-Nova-Mars-Defense/issues) with the release version or commit, operating system, reproduction steps, and a screenshot or error output when available. Mention whether you used the downloadable build or ran the project in Godot.
